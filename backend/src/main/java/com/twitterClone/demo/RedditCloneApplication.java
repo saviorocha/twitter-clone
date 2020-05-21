@@ -1,4 +1,4 @@
-package com.freecodecamp.redditClone.demo;
+package com.twitterClone.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
