@@ -34,7 +34,7 @@ public class AuthService {
 		user.setCriado(Instant.now());
 		user.setAtivado(false);
 		
-		UserRepository.save(user);
+		userRepo.save(user);
 		String token = generateVerificationToken(user);
 		mailService.sendMail(new NotificationEmail(
 				"Please activate your account", user.getEmail(),
@@ -49,8 +49,7 @@ public class AuthService {
 		verificationToken.setToken(token);
 		verificationToken.setUsuario(user);
 		
-		VerificationTokenRepository.save(verificationToken);
+		verificationTokenRepo.save(verificationToken);
 		return token;
-		return null;
 	}
 }
